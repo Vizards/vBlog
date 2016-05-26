@@ -1,0 +1,24 @@
+/**
+ * Created by Vizards on 16/4/27.
+ */
+
+var fs = require('fs');
+
+module.exports = {
+    env: process.env.NODE_ENV || 'production',
+    schema: 'http://',
+    host: '127.0.0.1',
+    port: 3000,
+    outerHost: 'demo.vizards.cc',
+    outerPort: 80,
+    mongodb: 'mongodb://localhost/tm-blog',
+    smtp: {
+        host: 'smtp.126.com',
+        port: 25,
+        auth: {
+            user: 'your e-mail',
+            pass: 'your password'
+        }
+    },
+    pkg: JSON.parse(fs.readFileSync('./package.json','utf-8'))
+};

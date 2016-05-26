@@ -1,0 +1,47 @@
+<html>
+<head>
+    {{>head}}
+</head>
+
+<body id="edit">
+
+<div class="container-fluid">
+
+    {{>admin_header}}
+
+    <div class="row">
+        <div class="col-sm-2">
+            {{>profile_nav this}}
+        </div>
+
+        <div class="col-sm-10">
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="form" method="post" action="/admin/post/{{id}}">
+                        <div class="form-group">
+                            <label for="title">标题</label>
+                            <input id="title" class="form-control" name="title" value="{{post.title}}" required="" autofocus="">
+                        </div>
+                        <textarea name="content" class="form-control" id="content">{{post.content}}</textarea>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>预览</label>
+                        <div id="preview"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="alert alert-danger" style="display: none;"></div>
+            <input type="file" accept="text/plain" name="markdown" />
+            <a class="btn btn-primary pull-left" onclick="upload();">上传</a>
+            <a class="btn btn-primary pull-right" onclick="save();">保存</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

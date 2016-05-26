@@ -1,0 +1,18 @@
+.post-content table{
+    border-left: 1px solid #666;
+    border-bottom: 1px solid #666;
+    margin: 20px 0 20px 0;
+    width: 90%;
+}
+.post-content td,th{
+    border-right:1px solid #666;
+    border-top: 1px solid #666;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    padding: 5px;
+}
+
+.OwO .OwO-logo {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: 3px;
+}
