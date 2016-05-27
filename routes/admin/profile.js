@@ -8,7 +8,7 @@ var User = require('../../models/user.js');
 var router = express.Router();
 var fs = require('fs');
 var path = require('path');
-
+var AVATAR_UPLOAD_FOLDER = '/avatar/';
 
 router.route('/')
     .get(function (req,res) {

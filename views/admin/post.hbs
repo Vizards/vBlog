@@ -36,9 +36,24 @@
             </div>
 
             <div class="alert alert-danger" style="display: none;"></div>
-            <input type="file" accept="text/plain" name="markdown" />
-            <a class="btn btn-primary pull-left" onclick="upload();">上传</a>
             <a class="btn btn-primary pull-right" onclick="save();">保存</a>
+
+            <div id="upload-container" class="upload-container">
+                {{#if locals.success}}
+                    <div id="alt_success" class="alert alert-success"></div>
+                {{/if}}
+
+                {{#if locals.error}}
+                    <div id="alt_warning" class="alert alert-warning"></div>
+                {{/if}}
+
+                <form class="form-signin" role="form" method="post" enctype="multipart/form-data">
+                    <h2 class="form-signin-heading">上传markdown文件</h2>
+                    <input type="file" id="fulAvatar" name="fulAvatar" class="form-control" />
+                    <br>
+                    <button id="butSub" class="btn btn-primary" type="submit">上传</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
