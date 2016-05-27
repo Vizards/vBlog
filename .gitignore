@@ -1,6 +1,6 @@
 .DS_Store
 .idea
-public/upload
+public/uploads
 node_modules
 config.js
 *.log
