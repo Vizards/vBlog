@@ -2,8 +2,6 @@
  * Created by Vizards on 16/4/28.
  * File: public/javascripts/admin-posts.js
  */
-var fs = require('fs');
-
 
 function save(){
     // validation
@@ -20,7 +18,3 @@ $(function(){
     });
     $('#content').trigger('input');
 });
-
-function upload() {
-    fs.readFile('')
-}
